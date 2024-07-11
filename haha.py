@@ -1,5 +1,6 @@
 import json
 
+
 # Sample JSON data (list of dictionaries)
 json_data = [
 {"city":{"id":1283240,"name":"Kathmandu","findname":"KATHMANDU","country":"NP","coord":{"lon":85.316666,"lat":27.716667},"zoom":7},"time":1489487389,"main":{"temp":291.15,"pressure":1017,"humidity":45,"temp_min":291.15,"temp_max":291.15},"wind":{"speed":9.3,"deg":240,"var_beg":200,"var_end":270},"clouds":{"all":75},"weather":[{"id":501,"main":"Rain","description":"proximity moderate rain","icon":"10d"}]},
@@ -128,10 +129,10 @@ for data in json_data:
         for entry in data['weather']:
             if 'main' in entry:
                 Main = entry['main']
-                if description not in listz:
+                if Main not in listz2:
                     listz2.append(Main)
 
 # Print the list of unique descriptions
 print("\nUnique Mainz:\n")
-for Main in listz:
+for Main in listz2:
     print(Main)
